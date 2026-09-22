@@ -52,4 +52,20 @@ public class PlayerController : MonoBehaviour
             playerRb.linearVelocity = new Vector3(playerRb.linearVelocity.x, playerRb.linearVelocity.y, 0);
         }
     }
+
+    private void OnCollisionEnter(Collision collision)
+    {
+        if (collision.gameObject.CompareTag("Enemy"))
+        {
+            Debug.Log("The player has collided with the enemy");
+        }
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.gameObject.CompareTag("Powerup"))
+        {
+            Destroy(other.gameObject);
+        }
+    }
 }
