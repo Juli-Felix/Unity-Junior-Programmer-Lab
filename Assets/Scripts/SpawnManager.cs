@@ -5,13 +5,13 @@ public class SpawnManager : MonoBehaviour
 
     public GameObject[] enemies;
     public GameObject powerup;
-    private float zEnemySpawn = 12.0f;
+    private float zEnemySpawn = 15.0f;
     private float xSpawnRange = 16.0f;
     private float zPowerupRange = 5.0f;
     private float yObjectSpawn = 0.75f;
 
     private float powerupSpawnTime = 5.0f;
-    private float enemySpawnTime = 1.0f;
+    private float enemySpawnTime = 1.5f;
     private float startDelay = 1.0f;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
@@ -46,4 +46,5 @@ public class SpawnManager : MonoBehaviour
 
         Instantiate(powerup, spawnPos,powerup.gameObject.transform.rotation);
     }
+
 }
